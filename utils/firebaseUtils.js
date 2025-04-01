@@ -1,5 +1,5 @@
 // firebaseUtils.js
-import { bucket } from '../server.js';
+import { bucket } from '../index.js';
 
 export const uploadToFirebase = async (file, folder) => {
   if (!file) return null;

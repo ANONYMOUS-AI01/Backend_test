@@ -124,10 +124,7 @@ app.use('/images', express.static('public/images'));
 
 const MONGO_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.wlpw7.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`;
 
-mongoose.connect(MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(MONGO_URI)
   .then(() => console.log('✅ Connected to MongoDB Atlas'))
   .catch((error) => {
     console.error('❌ MongoDB connection error:', error);
